@@ -35,6 +35,10 @@
       "version": "^3.9.1",
       "frameworks": "arduino",
       "platforms": ["espressif8266", "espressif32"]
+    },
+    {
+      "name": "libiop",
+      "version": "https://github.com/internet-of-plants/libiop"
     }
   ],
   "platforms": ["espressif8266", "espressif32","native"],
