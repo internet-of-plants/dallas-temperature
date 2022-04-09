@@ -37,8 +37,8 @@
       "platforms": ["espressif8266", "espressif32"]
     },
     {
-      "name": "libiop",
-      "version": "https://github.com/internet-of-plants/libiop"
+      "name": "iop-hal",
+      "version": "https://github.com/internet-of-plants/iop-hal"
     }
   ],
   "platforms": ["espressif8266", "espressif32","native"],
