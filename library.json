@@ -1,11 +1,10 @@
 {
-  "name": "dht",
-  "keywords": "http, web",
+  "name": "dallas_temperature",
   "description": "",
-  "homepage": "https://github.com/internet-of-plants/embedded",
+  "homepage": "https://github.com/internet-of-plants/dallas_temperature",
   "repository": {
     "type": "git",
-    "url": "https://github.com/internet-of-plants/embedded.git"
+    "url": "https://github.com/internet-of-plants/dallas_temperature.git"
   },
   "version": "0.1.0",
   "authors": {
@@ -46,4 +45,3 @@
     "libArchive": false
   }
 }
-  
