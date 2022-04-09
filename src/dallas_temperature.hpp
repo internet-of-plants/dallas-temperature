@@ -1,7 +1,7 @@
 #ifndef IOP_LIB_SENSORS_DALLAS_TEMP_HPP
 #define IOP_LIB_SENSORS_DALLAS_TEMP_HPP
 
-#include <iop/io.hpp>
+#include <iop-hal/io.hpp>
 
 namespace dallas {
 class TemperatureCollection {
