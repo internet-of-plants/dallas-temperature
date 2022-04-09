@@ -2,7 +2,7 @@
 #define IOP_LIB_SENSORS_DALLAS_TEMP_ARDUINO_HPP
 
 #include <dallas_temperature.hpp>
-#include <iop/panic.hpp>
+#include <iop-hal/panic.hpp>
 
 #include <OneWire.h>
 #include <DallasTemperature.h>
