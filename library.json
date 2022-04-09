@@ -1,0 +1,42 @@
+{
+  "name": "dht",
+  "keywords": "http, web",
+  "description": "",
+  "homepage": "https://github.com/internet-of-plants/embedded",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/internet-of-plants/embedded.git"
+  },
+  "version": "0.1.0",
+  "authors": {
+    "name": "Paulo Cabral Sanz",
+    "url": "https://github.com/paulocsanz"
+  },
+  "license": "AGPL-3.0",
+  "frameworks": "*",
+  "dependencies": [
+    {
+      "owner": "adafruit",
+      "name": "Adafruit Unified Sensor",
+      "version": "^1.1.4",
+      "frameworks": "arduino",
+      "platforms": ["espressif8266", "espressif32"]
+    },
+    {
+      "owner": "paulstoffregen",
+      "name": "OneWire",
+      "version": "^2.3.5",
+      "frameworks": "arduino",
+      "platforms": ["espressif8266", "espressif32"]
+    },
+    {
+      "author": "milesburton",
+      "name": "DallasTemperature",
+      "version": "^3.9.1",
+      "frameworks": "arduino",
+      "platforms": ["espressif8266", "espressif32"]
+    }
+  ],
+  "platforms": ["espressif8266", "espressif32","native"]
+}
+  
