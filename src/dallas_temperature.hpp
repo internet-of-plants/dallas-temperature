@@ -7,7 +7,7 @@ namespace dallas {
 class TemperatureCollection {
     void *sensor;
 public:
-    TemperatureCollection(driver::io::Pin pin) noexcept;
+    TemperatureCollection(iop_hal::io::Pin pin) noexcept;
     auto begin() noexcept -> void;
     auto measure() noexcept -> float;
 
