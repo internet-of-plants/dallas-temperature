@@ -4,7 +4,7 @@
 #include <dallas_temperature.hpp>
 
 namespace dallas {
-TemperatureCollection::TemperatureCollection(iop_hal::io::Pin pin) noexcept { (void) pin; }
+TemperatureCollection::TemperatureCollection(iop_hal::PinRaw pin) noexcept { (void) pin; }
 
 auto TemperatureCollection::begin() noexcept -> void {}
 auto TemperatureCollection::measure() noexcept -> float { return 0.; }

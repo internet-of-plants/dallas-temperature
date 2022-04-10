@@ -16,7 +16,7 @@ class OneWireBus {
     DallasTemperature temp;
 
 public:
-    OneWireBus(iop_hal::io::Pin pin) noexcept: oneWire(static_cast<uint8_t>(pin)), temp(&oneWire) {}
+    OneWireBus(iop_hal::PinRaw pin) noexcept: oneWire(pin), temp(&oneWire) {}
 
     OneWireBus(const OneWireBus &other) noexcept = delete;
     OneWireBus(OneWireBus &&other) noexcept = delete;
@@ -26,7 +26,7 @@ public:
     friend TemperatureCollection;
 };
 
-TemperatureCollection::TemperatureCollection(iop_hal::io::Pin pin) noexcept: sensor(new (std::nothrow) OneWireBus(pin)) {
+TemperatureCollection::TemperatureCollection(iop_hal::PinRaw pin) noexcept: sensor(new (std::nothrow) OneWireBus(pin)) {
     iop_assert(this->sensor != nullptr, IOP_STR("Unable to allocate OneWireBus"));
 }
 
