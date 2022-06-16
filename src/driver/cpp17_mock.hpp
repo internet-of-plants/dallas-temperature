@@ -1,5 +1,5 @@
-#ifndef IOP_LIB_SENSORS_DALLAS_TEMP_NOOP_HPP
-#define IOP_LIB_SENSORS_DALLAS_TEMP_NOOP_HPP
+#ifndef IOP_LIB_SENSORS_DALLAS_TEMP_CPP17_MOCK_HPP
+#define IOP_LIB_SENSORS_DALLAS_TEMP_CPP17_MOCK_HPP
 
 #include <dallas_temperature.hpp>
 
@@ -8,7 +8,7 @@
 auto randomTemperature() -> float {
     std::random_device dev;
     std::mt19937 rng(dev());
-    std::uniform_int_distribution<std::mt19937::result_type> dist(250, 350);
+    std::uniform_int_distribution<std::mt19937::result_type> dist(150, 250);
     return static_cast<float>(dist(rng)) / 10.;
 }
 
@@ -16,7 +16,7 @@ auto randomTemperatureVariation(float current) -> float {
     std::random_device dev;
     std::mt19937 rng(dev());
     std::uniform_int_distribution<std::mt19937::result_type> dist(-3, 3);
-    return std::max(std::min(current + static_cast<float>(dist(rng)) / 10., 35.), 25.);
+    return std::max(std::min(current + static_cast<float>(dist(rng)) / 10., 25.), 15.);
 }
 
 namespace dallas {
