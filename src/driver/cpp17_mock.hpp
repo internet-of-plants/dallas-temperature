@@ -5,6 +5,7 @@
 
 #include <random>
 
+namespace dallas {
 auto randomTemperature() -> float {
     std::random_device dev;
     std::mt19937 rng(dev());
@@ -19,7 +20,6 @@ auto randomTemperatureVariation(float current) -> float {
     return std::max(std::min(current + static_cast<float>(dist(rng)) / 10., 25.), 15.);
 }
 
-namespace dallas {
 TemperatureCollection::TemperatureCollection(iop_hal::PinRaw pin) noexcept: sensor(new float(randomTemperature())) { (void) pin; }
 
 auto TemperatureCollection::begin() noexcept -> void {}
