@@ -3,6 +3,8 @@
 
 #include <dallas_temperature.hpp>
 
+#include <random>
+
 auto randomTemperature() -> float {
     std::random_device dev;
     std::mt19937 rng(dev());
