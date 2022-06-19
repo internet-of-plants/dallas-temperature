@@ -14,6 +14,9 @@ auto randomTemperature() -> float {
 }
 
 auto randomTemperatureVariation(float current) -> float {
+    if (current <= 16.) return current + 3.;
+    if (current >= 24.) return current - 3.;
+
     std::random_device dev;
     std::mt19937 rng(dev());
     std::uniform_int_distribution<std::mt19937::result_type> dist(0, 60);
