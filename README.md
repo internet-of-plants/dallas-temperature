@@ -10,7 +10,7 @@ DS18B20, DS18S20, DS1822, DS1820
 
 - ESP8266 (all boards supported by [esp8266/Arduino](https://github.com/esp8266/Arduino))
 - ESP32 (all boards supported by [espressif/arduino-esp32](https://github.com/espressif/arduino-esp32/))
-- Posix (all targets that support POSIX)
+- Linux Mock
 
 ## License
 

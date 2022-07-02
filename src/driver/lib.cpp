@@ -1,4 +1,4 @@
-#ifdef IOP_POSIX_MOCK
+#ifdef IOP_LINUX_MOCK
 #include "driver/cpp17_mock.hpp"
 #elif defined(IOP_ESP8266)
 #include "driver/arduino.hpp"
