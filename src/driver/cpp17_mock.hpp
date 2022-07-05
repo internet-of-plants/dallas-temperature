@@ -19,8 +19,8 @@ auto randomTemperatureVariation(float current) -> float {
 
     std::random_device dev;
     std::mt19937 rng(dev());
-    std::uniform_int_distribution<std::mt19937::result_type> dist(0, 60);
-    return std::max(std::min(current + static_cast<float>(dist(rng)) / 10. - 3., 25.), 15.);
+    std::uniform_int_distribution<std::mt19937::result_type> dist(0, 10);
+    return std::max(std::min(current + static_cast<float>(dist(rng)) / 10. - 0.5, 25.), 15.);
 }
 
 TemperatureCollection::TemperatureCollection(iop_hal::PinRaw pin) noexcept: sensor(new float(randomTemperature())) { (void) pin; }
