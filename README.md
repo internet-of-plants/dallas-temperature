@@ -14,4 +14,4 @@ DS18B20, DS18S20, DS1822, DS1820
 
 ## License
 
-[GNU Affero General Public License version 3 or later (AGPL-3.0+)](https://github.com/internet-of-plants/dallas_temperature/blob/main/LICENSE.md)
+[GNU Affero General Public License version 3 or later (AGPL-3.0+)](https://github.com/internet-of-plants/dallas-temperature/blob/main/LICENSE.md)

@@ -1,10 +1,10 @@
 {
-  "name": "dallas_temperature",
+  "name": "dallas-temperature",
   "description": "",
-  "homepage": "https://github.com/internet-of-plants/dallas_temperature",
+  "homepage": "https://github.com/internet-of-plants/dallas-temperature",
   "repository": {
     "type": "git",
-    "url": "https://github.com/internet-of-plants/dallas_temperature.git"
+    "url": "https://github.com/internet-of-plants/dallas-temperature.git"
   },
   "version": "0.1.0",
   "authors": {

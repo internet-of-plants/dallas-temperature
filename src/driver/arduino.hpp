@@ -27,15 +27,15 @@ public:
 };
 
 TemperatureCollection::TemperatureCollection(iop_hal::PinRaw pin) noexcept: sensor(new (std::nothrow) OneWireBus(pin)) {
-    iop_assert(this->sensor != nullptr, IOP_STR("Unable to allocate OneWireBus"));
+    iop_assert(this->sensor, IOP_STR("Unable to allocate OneWireBus"));
 }
 
 auto TemperatureCollection::begin() noexcept -> void {
-    iop_assert(this->sensor != nullptr, IOP_STR("Sensor is nullptr"));
+    iop_assert(this->sensor, IOP_STR("Sensor is nullptr"));
     SENSOR(*this)->begin();
 }
 auto TemperatureCollection::measure() noexcept -> float {
-    iop_assert(this->sensor != nullptr, IOP_STR("Sensor is nullptr"));
+    iop_assert(this->sensor, IOP_STR("Sensor is nullptr"));
     // Blocks until reading is done
     SENSOR(*this)->requestTemperatures();
     // Accessing by index is bad. It's slow, we should store the sensor's address
