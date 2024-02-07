@@ -8,7 +8,7 @@
 #include <DallasTemperature.h>
 
 namespace dallas {
-#define SENSOR(self) static_cast<DallasTemperature*>((self).sensor)
+#define SENSOR(self) static_cast<OneWireBus*>((self).sensor)
 
 /// Be ware, self-referential struct, it should _never_ move addresses.
 class OneWireBus {
@@ -31,16 +31,18 @@ TemperatureCollection::TemperatureCollection(iop_hal::PinRaw pin) noexcept: sens
 }
 
 auto TemperatureCollection::begin() noexcept -> void {
+    IOP_TRACE();
     iop_assert(this->sensor, IOP_STR("Sensor is nullptr"));
-    SENSOR(*this)->begin();
+    SENSOR(*this)->temp.begin();
 }
 auto TemperatureCollection::measure() noexcept -> float {
+    IOP_TRACE();
     iop_assert(this->sensor, IOP_STR("Sensor is nullptr"));
     // Blocks until reading is done
-    SENSOR(*this)->requestTemperatures();
+    SENSOR(*this)->temp.requestTemperatures();
     // Accessing by index is bad. It's slow, we should store the sensor's address
     // and use it
-    return SENSOR(*this)->getTempCByIndex(0);
+    return SENSOR(*this)->temp.getTempCByIndex(0);
 }
 
 auto TemperatureCollection::operator=(TemperatureCollection && other) noexcept -> TemperatureCollection & {
